@@ -1,0 +1,2 @@
+# Allow cameraserver to read vendor default properties (required by vendor camera libs)
+get_prop(cameraserver, somc_camera_prop)

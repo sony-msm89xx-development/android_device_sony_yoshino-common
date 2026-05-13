@@ -12,3 +12,6 @@ set_prop(vendor_init, camera_prop)
 
 # Allow vendor init to set cust_system_prop
 set_prop(vendor_init, cust_system_prop)
+
+# Allow vendor init to set secd_prop
+set_prop(vendor_init, secd_prop)

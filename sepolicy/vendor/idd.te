@@ -10,8 +10,10 @@ allow idd hal_idd_hwservice:hwservice_manager find;
 
 allow idd idd_exec:file x_file_perms;
 
-allow idd idd_data_file:dir rw_dir_perms;
-allow idd idd_data_file:file rw_file_perms;
+allow idd idd_data_file:dir create_dir_perms;
+allow idd idd_data_file:file create_file_perms;
+allow idd idd_socket_file:dir rw_dir_perms;
+allow idd idd_socket_file:sock_file create_file_perms;
 allow idd idd_output_file:dir rw_dir_perms;
 allow idd idd_rca_file:dir create_dir_perms;
 allow idd idd_rca_file:file create_file_perms;
@@ -22,3 +24,10 @@ allow idd idd_root_dir:file create_file_perms;
 unix_socket_connect(idd, tad, tad)
 
 get_prop(idd, hwservicemanager_prop)
+
+# Allow idd to run idd-logreader
+allow idd vendor_file:file rx_file_perms;
+
+# Don't audit debugfs reads.
+dontaudit idd debugfs:file r_file_perms;
+

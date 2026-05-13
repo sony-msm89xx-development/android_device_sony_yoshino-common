@@ -2,3 +2,6 @@ type snfcboot, domain;
 type snfcboot_exec, exec_type, vendor_file_type, file_type;
 
 init_daemon_domain(snfcboot)
+
+allow snfcboot nfc_device:chr_file { ioctl read write open getattr };
+allow snfcboot self:capability setuid;

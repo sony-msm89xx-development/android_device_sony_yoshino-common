@@ -3,3 +3,6 @@ userdebug_or_eng(`
   allow rmt_storage debugfs_rmt:dir search;
   allow rmt_storage debugfs_rmt:file rw_file_perms;
 ')
+
+# Allow rmt_storage to read sysfs_data for subsystem status
+allow rmt_storage sysfs_data:file r_file_perms;

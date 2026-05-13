@@ -10,3 +10,4 @@ vendor.somc.hardware.miscta::IMisctaGlobal                                      
 vendor.somc.hardware.modemswitcher::IModemSwitcher                                          u:object_r:hal_modemswitcher_hwservice:s0
 vendor.somc.hardware.radio::ISomcHook                                                       u:object_r:somc_hw_radio_hwservice:s0
 vendor.somc.hardware.security.secd::IDeviceSecurity                                         u:object_r:hal_secd_hwservice:s0
+vendor.somc.hardware.camera.provider::IVendorSomcCameraProvider                             u:object_r:hal_camera_hwservice:s0
