@@ -2,12 +2,12 @@
 allow hal_camera_default sysfs:file r_file_perms;
 
 # Allow hal_camera_default to write to tad socket and connect to tad daemon
-allow hal_camera_default tad_socket:sock_file write;
 allow hal_camera_default tad:unix_stream_socket connectto;
+allow hal_camera_default tad_socket:sock_file write;
 
 # Allow hal_camera_default to find and call hal_idd_default
-allow hal_camera_default hal_idd_hwservice:hwservice_manager find;
 allow hal_camera_default hal_idd_default:binder call;
+allow hal_camera_default hal_idd_hwservice:hwservice_manager find;
 
 # Allow hal_camera_default to access sockets in /dev/socket
 allow hal_camera_default socket_device:sock_file write;
